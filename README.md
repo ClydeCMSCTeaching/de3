@@ -46,7 +46,7 @@ void matrixDestroy(int **arr, int length1);
 
 ## Strings
 
-Write a function which reverses a string. Write the same function which reverses a char array. Remember, always becareful. The type char* can either be a char array, for which one MUST state the length, or it could be a "string" in which the last charater is \0 which indicates the end of the string. 
+Write a function which reverses a string. Write the same function which reverses a char array. Remember, always becareful. The type char* can either be a char array, for which one MUST state the length, or it could be a "string" in which the last charater is \0 which indicates the end of the string. You can write this in a single file `stringtest.c`. 
 ```c
 void stringReverse(char* str);
 
@@ -55,7 +55,7 @@ void charArrReverse(char *arr, int len);
 
 
 ## Files
-Write a function which opens the file ("SASRS-CoV-2sequence.fasta") and reports how many base pairs are in the first line of the file not beginning with '>' or ';'. Recall, we are using const char* instead of char* because the function ought not modify the filename... that's rather fixed---it is what it is.
+Write a function which opens the file ("SASRS-CoV-2sequence.fasta") and reports how many base pairs are in the first line of the file not beginning with '>' or ';'. Recall, we are using const char* instead of char* because the function ought not modify the filename... that's rather fixed---it is what it is. You should create a file `fasta.c` and `fasta.h`, placing this function in the their. Write a `fasta_test.c` file with a main to test.
 ```c
 int getSequenceLength(const char* filename);
 ```
@@ -69,7 +69,7 @@ The basic template of a variadic function is `void variadicFunc(int numArgs, ...
 First, we declare in the function a variable of type `va_list`, which stands for variadic argument list, such as `va_list args;`. Then, we write `va_start(args, numArgs);` which says we are going to start iterating over the argument list provided and it has length `numArgs`. 
 
 
-Write a variadic function which takes the maximum of the provided list of ints. 
+Write a variadic function which takes the maximum of the provided list of ints. You can just create a single file `variadicTest.c` for this.
 ```c
 int maxInts(int numArgs, ...) {
   //todo
